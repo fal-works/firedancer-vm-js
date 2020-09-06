@@ -1,0 +1,33 @@
+{
+  "name": "@fal-works/firedancer-vm",
+  "description": "Virtual machine for Firedancer, a Haxe-based language for defining 2D shmups bullet-hell patterns.",
+  "version": "0.1.0",
+  "author": "FAL Works",
+  "bugs": {
+    "url": "https://github.com/fal-works/firedancer-vm-js/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "terser": "^5.3.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "eslintIgnore": [
+    "./**"
+  ],
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/fal-works/firedancer-vm-js#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "lib/firedancer-vm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fal-works/firedancer-vm-js.git"
+  },
+  "scripts": {
+    "minify": "terser ./lib/firedancer-vm.js -c -o ./lib/firedancer-vm.min.js --comments --ecma 6"
+  }
+}

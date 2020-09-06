@@ -1,0 +1,19 @@
+# Build JavaScript Library
+
+-cp src
+-dce full
+
+-lib firedancer-vm
+
+-D sneaker_assertion_disable
+-D firedancer_use_actor_class
+
+-js lib/firedancer-vm.js
+-D js-es=6
+
+ProgramPackage
+Actor
+ActorGroup
+RectangleBounds
+
+--cmd yarn minify
