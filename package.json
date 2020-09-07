@@ -1,7 +1,7 @@
 {
   "name": "@fal-works/firedancer-vm",
   "description": "Virtual machine for Firedancer, a Haxe-based language for defining 2D shmups bullet-hell patterns.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "FAL Works",
   "bugs": {
     "url": "https://github.com/fal-works/firedancer-vm-js/issues"
