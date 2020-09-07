@@ -3,6 +3,11 @@
 A JavaScript wrapper for [Firedancer VM](https://github.com/fal-works/firedancer-vm/).
 
 
+## Caveats
+
+Unstable!!
+
+
 ## Usage
 
 (See also the full [Example](#Example) below)
@@ -17,14 +22,14 @@ For example:
 
 ```html
 <head>
-  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.1/lib/firedancer-vm.min.js" defer></script>
-  <script src="path/to/your/script.js" defer></script>
+  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.2/lib/firedancer-vm.min.js" defer></script>
+  <script src="path/to/your-script.js" defer></script>
 </head>
 ```
 
 ### Prepare a `FiredancerVM.ProgramPackage` instance
 
-Prepare any [Firedancer](https://github.com/fal-works/firedancer/) program package serialized into a string representation.
+Prepare any [Firedancer](https://github.com/fal-works/firedancer/) program package serialized into a JSON string representation.
 
 Then parse it by `FiredancerVM.ProgramPackage.fromString()` so that you get a `FiredancerVM.ProgramPackage` instance, which can be executed on the VM.
 
@@ -57,7 +62,7 @@ FiredancerVM.RectangleBounds.fromSize(
 
 ### Create Firedancer Context
 
-Create a context object.
+Create a context object:
 
 ```ts
 {
@@ -118,16 +123,16 @@ Basically the frame rate should be fixed to 60 FPS.
 
 Here is a full (but simple) example using FiredancerVM.js and [p5.js](https://p5js.org/).
 
-Be sure to load each library before the script below.
+Be sure to load each library before your own script.
 
 ```html
 <!DOCTYPE html>
 <html>
 
 <head>
-  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.1/lib/firedancer-vm.min.js" defer></script>
+  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.2/lib/firedancer-vm.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
-  <script src="my-script.js" defer></script>
+  <script src="path/to/your-script.js" defer></script>
 </head>
 
 <body>
@@ -138,7 +143,7 @@ Be sure to load each library before the script below.
 
 ```js
 /**
- * my-script.js
+ * your-script.js
  */
 
 // Common constants
@@ -206,3 +211,13 @@ function draw() {
   actors.draw();
 }
 ```
+
+## Third Party Licenses
+
+The following software may be included in this product:
+
+### The Haxe Standard Library
+
+© 2005-2016 Haxe Foundation
+
+Used under [MIT License](https://haxe.org/foundation/open-source.html).
