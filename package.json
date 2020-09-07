@@ -28,6 +28,6 @@
     "url": "git+https://github.com/fal-works/firedancer-vm-js.git"
   },
   "scripts": {
-    "minify": "terser ./lib/firedancer-vm.js -c -o ./lib/firedancer-vm.min.js --comments --ecma 6"
+    "minify": "terser ./lib/firedancer-vm.js -c -m -o ./lib/firedancer-vm.min.js --comments --ecma 6"
   }
 }
