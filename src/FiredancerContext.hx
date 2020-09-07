@@ -24,6 +24,8 @@ class FiredancerContextTools {
 	}
 
 	public static function fill(ctx:FiredancerContext):FiredancerContext {
+		if (isNone(ctx.programPackage))
+			throw "Missing property \"programPackage\" in the context.";
 		if (isNone(ctx.defaultTargetPositionRef))
 			ctx.defaultTargetPositionRef = {x: 0.0, y: 0.0};
 		if (isNone(ctx.onEnd))
