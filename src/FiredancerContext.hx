@@ -4,9 +4,9 @@ import firedancer.vm.Thread;
 
 typedef FiredancerContext = {
 	programPackage:ProgramPackage,
+	habitableZone:RectangleBounds,
 	defaultTargetPositionRef:PositionRef,
 	onEnd:(actor:Actor, endCode:Int) -> Void,
-	habitableZone:RectangleBounds,
 	getGroupOnFire:(fireCode:Int) -> ActorGroup,
 	onFire:(actor:Actor, fireCode:Int) -> Void,
 	onGlobalEvent:(glotalEventCode:Int) -> Void,
@@ -26,12 +26,12 @@ class FiredancerContextTools {
 	public static function fill(ctx:FiredancerContext):FiredancerContext {
 		if (isNone(ctx.programPackage))
 			throw "Missing property \"programPackage\" in the context.";
+		if (isNone(ctx.habitableZone))
+			ctx.habitableZone = RectangleBounds.fromSize(640.0, 480.0, 0.0, true, true);
 		if (isNone(ctx.defaultTargetPositionRef))
 			ctx.defaultTargetPositionRef = {x: 0.0, y: 0.0};
 		if (isNone(ctx.onEnd))
 			ctx.onEnd = (_, _) -> {};
-		if (isNone(ctx.habitableZone))
-			ctx.habitableZone = RectangleBounds.fromSize(640.0, 480.0, 0.0, true, true);
 		if (isNone(ctx.getGroupOnFire))
 			ctx.getGroupOnFire = (_) -> throw "Missing getGroupOnFire() in the current context.";
 		if (isNone(ctx.onFire))
