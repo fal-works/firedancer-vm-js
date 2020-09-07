@@ -5,7 +5,8 @@ A JavaScript wrapper for [Firedancer VM](https://github.com/fal-works/firedancer
 
 ## Caveats
 
-Unstable!!
+- Unstable!!
+- Currently the thread pool capacity (the max number of threads per actor) is fixed at `8`, and the memory capacity (the memory size in bytes per actor) is fixed at `256`. Maybe these should be possible to change in future versions.
 
 
 ## Usage
