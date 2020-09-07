@@ -17,7 +17,7 @@ For example:
 
 ```html
 <head>
-  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.0/lib/firedancer-vm.min.js" defer></script>
+  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.1/lib/firedancer-vm.min.js" defer></script>
   <script src="path/to/your/script.js" defer></script>
 </head>
 ```
@@ -125,7 +125,7 @@ Be sure to load each library before the script below.
 <html>
 
 <head>
-  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.0/lib/firedancer-vm.min.js" defer></script>
+  <script src="https://unpkg.com/@fal-works/firedancer-vm@0.1.1/lib/firedancer-vm.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
   <script src="my-script.js" defer></script>
 </head>
