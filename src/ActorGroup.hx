@@ -23,14 +23,19 @@ class ActorGroup {
 		this.last = Maybe.none();
 	}
 
+	/**
+		Updates all actors and then add new reserved actors.
+	**/
 	public function update():Void {
 		this.updateActors();
-		this.activateReservedActors();
+		this.addReservedActors();
 	}
 
+	/**
+		Draws all actors.
+	**/
 	public function draw():Void {
-		var cur:Maybe<Actor>;
-		cur = this.first;
+		var cur = this.first;
 		while (cur.isSome()) {
 			final actor = cur.unwrap();
 
@@ -71,7 +76,7 @@ class ActorGroup {
 		}
 	}
 
-	function activateReservedActors():Void {
+	function addReservedActors():Void {
 		final reservedActors = this.reservedActors;
 		for (i in 0...reservedActors.length) {
 			final actor = reservedActors[i];
