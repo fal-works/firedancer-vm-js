@@ -28,6 +28,7 @@ function setup() {
     circle(actor.x, actor.y, 10);
   };
 
+  actors.clear();
   actors.use().reset(0, 0, 0, 0, programPackage.getProgramByName("main"));
 }
 

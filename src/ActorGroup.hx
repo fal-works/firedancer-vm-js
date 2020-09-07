@@ -63,6 +63,19 @@ class ActorGroup {
 		return actor;
 	}
 
+	/**
+		Removes all actors and pushes them to the pool.
+	**/
+	public function clear():Void {
+		var cur = this.first;
+		while (cur.isSome()) {
+			final actor = cur.unwrap();
+			this.remove(actor);
+			this.actorPool.push(actor);
+			cur = actor.next;
+		}
+	}
+
 	function updateActors():Void {
 		final context = this.context;
 		final eventHandler = this.eventHandler;
