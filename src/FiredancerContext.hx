@@ -24,8 +24,6 @@ class FiredancerContextTools {
 	}
 
 	public static function fill(ctx:FiredancerContext):FiredancerContext {
-		if (isNone(ctx.programPackage))
-			throw "Missing property \"programPackage\" in the context.";
 		if (isNone(ctx.habitableZone))
 			ctx.habitableZone = RectangleBounds.fromSize(640.0, 480.0, 0.0, true, true);
 		if (isNone(ctx.defaultTargetPositionRef))
