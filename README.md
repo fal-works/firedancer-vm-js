@@ -115,9 +115,9 @@ actors.use().reset(x, y, vx, vy, program);
 
 ### Run
 
-Call `update()` and `draw()` on your `FiredancerVM.ActorGroup` instance(s) in each frame.
+Call `update()` and `draw()` on your `FiredancerVM.ActorGroup` instance(s) every frame.
 
-Basically the frame rate should be fixed to 60 FPS.
+Basically the frame rate should be fixed at 60 FPS.
 
 
 ## Example
