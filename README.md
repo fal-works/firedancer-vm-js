@@ -1,6 +1,6 @@
 # FiredancerVM.js
 
-A JavaScript wrapper for [Firedancer VM](https://github.com/fal-works/firedancer-vm/).
+A JavaScript wrapper for [Firedancer VM](https://github.com/fal-works/firedancer-vm/) (based on v0.1.0).
 
 
 ## Caveats
